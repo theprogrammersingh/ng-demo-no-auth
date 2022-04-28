@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <h1 class="w-75 mx-auto">User Info</h1>
+  <div *ngIf="!user" class="card w-50 mx-auto">
+    <img
+      class="mx-auto"
+      style="height: 100px; width: 100px"
+      src="assets/images/DualBall-1s-200px.svg"
+      alt="DualBall-loader"
+    />
+  </div>
+  <div *ngIf="!!user" class="card w-75 mx-auto d-flex flex-row">
+    <img
+      src="assets/images/user-placeholder.png"
+      class="card-img-top"
+      [alt]="user?.name"
+      style="height: 200px; width: 200px"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ user?.name }}</h5>
+      <p class="card-text">
+        {{ user?.email }}
+      </p>
+      <p class="card-text">
+        {{ user?.phone }}
+      </p>
+      <p class="card-text">
+        {{ user?.website }}
+      </p>
+    </div>
+  </div>
+</div>

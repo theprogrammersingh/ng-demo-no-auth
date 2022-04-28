@@ -1,0 +1,21 @@
+<div
+  *ngIf="users && users.length >= 0"
+  class="container mt-5 d-flex flex-wrap justify-content-evenly"
+>
+  <app-user-item
+    class="col-4 col-md-3 col-s-2 col-xs-2 m-2"
+    *ngFor="let user of users"
+    [user]="user"
+  ></app-user-item>
+</div>
+<div
+  *ngIf="!users || users.length < 1"
+  class="container mt-5 d-flex flex-wrap justify-content-evenly"
+>
+  <img
+    class="mx-auto"
+    style="height: 100px; width: 100px"
+    src="assets/images/DualBall-1s-200px.svg"
+    alt="DualBall-loader"
+  />
+</div>
